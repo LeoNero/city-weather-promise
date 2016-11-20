@@ -1,6 +1,7 @@
 {
   "name": "city-weather-promise",
   "version": "1.0.0",
+  "description": "Check meteorological info from some city",
   "main": "dist/city-weather-promise.js",
   "scripts": {
     "lint": "eslint src test",
