@@ -12,10 +12,10 @@ export default function(city) {
   return new Promise((resolve, reject) => {
     if (typeof city !== 'string') {
       throw new CityWeatherPromiseError({
-        message: 'Erro ao inicializar CityWeatherPromise.',
+        message: 'Error when initializing CityWeatherPromise.',
         type: 'validation-error',
         errors: [{
-          message: 'Você deve chamar o construtor utilizando uma String.'
+          message: 'You must call the constructor using a String.'
         }]
       });
     }
@@ -29,7 +29,7 @@ export default function(city) {
       })
       .catch(error => {
         reject(new CityWeatherPromiseError({
-          message: `A cidade ${city} nao foi encontrada.`,
+          message: `The city ${city} was not found.`,
           type: 'service-error',
           errors: [error.response.data]
         }));

@@ -8,10 +8,10 @@ exports.default = function (city) {
   return new Promise(function (resolve, reject) {
     if (typeof city !== 'string') {
       throw new _cityWeatherPromise2.default({
-        message: 'Erro ao inicializar CityWeatherPromise.',
+        message: 'Error when initializing CityWeatherPromise.',
         type: 'validation-error',
         errors: [{
-          message: 'Você deve chamar o construtor utilizando uma String.'
+          message: 'You must call the constructor using a String.'
         }]
       });
     }
@@ -23,7 +23,7 @@ exports.default = function (city) {
       resolve(response.data);
     }).catch(function (error) {
       reject(new _cityWeatherPromise2.default({
-        message: 'A cidade ' + city + ' nao foi encontrada.',
+        message: 'The city ' + city + ' was not found.',
         type: 'service-error',
         errors: [error.response.data]
       }));
