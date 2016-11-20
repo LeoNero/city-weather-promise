@@ -1,6 +1,6 @@
 {
   "name": "city-weather-promise",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Check meteorological info from some city",
   "main": "dist/city-weather-promise.js",
   "scripts": {
