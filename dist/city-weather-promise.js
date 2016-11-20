@@ -20,7 +20,7 @@ exports.default = function (city) {
     var url = '' + BASE_URL + cityFormatted + '&APPID=' + APP_ID;
 
     _axios2.default.get(url).then(function (response) {
-      resolve(response);
+      resolve(response.data);
     }).catch(function (error) {
       reject(new _cityWeatherPromise2.default({
         message: 'A cidade ' + city + ' nao foi encontrada.',
